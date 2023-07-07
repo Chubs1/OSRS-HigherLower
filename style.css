@@ -1,0 +1,254 @@
+body, html {
+    background-color: black;
+
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+      overflow-x: hidden;
+
+}
+
+header {
+    position: static;
+
+    border-bottom: 2px solid #555555;
+    height: 10%;
+
+}
+
+footer {
+    border-top: 2px solid #555555;
+
+    height: 25%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#app {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+    position: relative; 
+    background-image: url("./bg.jpg");
+    background-repeat:repeat-y;
+    background-position: top;
+    background-size: 100%;
+    
+}
+
+#scoreText {
+    position: relative;
+    margin-bottom: auto;
+    right: 0%;
+}
+
+#bestScoreText {
+    position: relative;
+    margin-bottom: auto;
+
+
+}
+
+#center {
+    
+    width: 20%;
+}
+
+#buttons {
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 100%;
+}
+
+.buttons {
+    background-color: black;
+    color: white;
+    font-size: 200%;
+    border: 3px solid #555555;
+    border-radius: 30px;
+    height: 60px;
+    width: 100%;
+    transition: border 0.5s;
+
+}
+
+#less {
+    top: 100%;
+}
+
+#resetButton:hover{
+    border: 3px solid green;
+    transition: border 0.5s;
+}
+
+#more:hover {
+    border: 3px solid green;
+    transition: border 0.5s;
+
+}
+
+#less:hover {
+    border: 3px solid red;
+    transition: border 0.5s;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+img{
+    width: 50%;
+    display: inline-block;
+}
+
+.arrows {
+    width: 90%;
+    height: 90%;
+}
+
+@keyframes changeRed {
+    0% {background-position: center 10%;}
+    50% {background-position: center 30%;}
+    100% {background-position: center 10% ;}
+}
+
+@keyframes changeGreen {
+    0% {background-position: center 90%;}
+    50% {background-position: center 70%;}
+    100% {background-position: center 90%;}
+}
+
+.lessHover{
+    background: url(./redArrow.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 150%;
+    animation: changeRed 0.9s infinite;
+}
+
+.moreHover {
+    background: url(./greenArrow.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    animation: changeGreen 0.9s infinite;
+
+}
+
+.moreArrowClick{
+    background: url(./greenArrow.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+}
+
+.lessArrowClick{
+    background: url(./redArrow.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+}
+
+.moreClick{
+    transform: translateY(-120%);
+    transition: transform 1.5s; 
+}
+
+.lessClick{
+    transform: translateY(120%);
+    transition: transform 1.5s;
+}
+
+.revealY {
+    transform: translateY(0%);
+    transition: transform 1s;
+}
+
+.revealX {
+    transform: translateX(-280%);
+    transition: transform 2s; 
+}
+
+@keyframes revealNewItem {
+    0% {transform: translateX(600%);}
+    90% {transform: translateX(280%);}
+    100% {transform: translateX(280%);}
+}
+
+.revealNewItem {
+    animation: revealNewItem 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.selectedEasy {
+    border: 3px solid green;
+}
+
+.selectedMedium {
+    border: 3px solid yellow;
+}
+
+.selectedHard {
+    border: 3px solid red;
+}
+
+.easyButton:hover {
+    border: 3px solid green;
+}
+
+.mediumButton:hover {
+    border: 3px solid yellow;
+}
+
+.hardButton:hover {
+    border: 3px solid red;
+}
+
+.difficultyButton {
+margin-bottom: 20px;
+}
+
+.startButton{
+    margin-top: 60px;
+}
+
+.startButton:hover{
+    border: 3px solid green;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
