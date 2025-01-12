@@ -188,13 +188,17 @@ const loadWebsite = () => {
   
 
   moreButton.addEventListener("mouseover", () => {
+    if(!moreButton.disabled){
     moreArrow.classList.add("moreHover");
+    }
   });
   moreButton.addEventListener("mouseout", () => {
     moreArrow.classList.remove("moreHover");
   });
   lessButton.addEventListener("mouseover", () => {
+    if(!lessButton.disabled){
     lessArrow.classList.add("lessHover");
+    }
   });
   lessButton.addEventListener("mouseout", () => {
     lessArrow.classList.remove("lessHover");
