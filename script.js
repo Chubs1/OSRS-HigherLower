@@ -25,7 +25,7 @@ const difficulty = [
     minimumPrice: 1000
   },
   {
-    chanceOfHard: 1,
+    chanceOfHard: 0.85,
     range: 0.2,
     minimumPrice: 1000
   }
