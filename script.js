@@ -264,10 +264,10 @@ const loadWebsite = () => {
     }, time);
   };
 
-  const COINTOCENTER = 1000;
-  const COINSTAY = 2750;
-  const ITEMCENTER = 1000;
-  const ITEMMOVE = 1000;
+  const COINTOCENTER = 500;
+  const COINSTAY = 1500;
+  const ITEMCENTER = 500;
+  const ITEMMOVE = 500;
 
   const correctAnimation = () => {
     setTimeout(() => {
